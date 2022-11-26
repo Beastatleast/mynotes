@@ -1,6 +1,8 @@
 import 'package:mynotes/services/auth/auth_user.dart';
 
 abstract class AuthProvider {
+  Future<void> initialize();
+
   // we should be able to get the current user
   AuthUser? get currentUser;
   // Login Function
@@ -18,3 +20,5 @@ abstract class AuthProvider {
   // Function to send a verification email
   Future<void> sendEmailVerification();
 }
+
+
